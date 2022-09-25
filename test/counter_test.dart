@@ -19,15 +19,5 @@ void main() {
       await theAppIsRunning(tester);
       await iTapIcon(tester, Icons.add);
     });
-    testWidgets('''The text is BDD rules when the counter value is 3''', (tester) async {
-      await theAppIsRunning(tester);
-      await iTapIcon(tester, Icons.add);
-      await iTapIcon(tester, Icons.add);
-      await iTapIcon(tester, Icons.add);
-      await iDontSeeText(tester, '3');
-      await iSeeText(tester, 'BDD Rules!');
-      await iTapIcon(tester, Icons.add);
-      await iSeeText(tester, '4');
-    });
   });
 }
